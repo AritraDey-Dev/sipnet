@@ -2,8 +2,8 @@ name: Release
 
 on:
   push:
-    tags:
-      - 'v*.*.*'  # Trigger on version tags
+    branches: 
+      - "*"
 
 jobs:
   release:
@@ -29,4 +29,4 @@ jobs:
           draft: true  # Create the release as a draft
           files: ./sipnet  # Path to the compiled binary
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
