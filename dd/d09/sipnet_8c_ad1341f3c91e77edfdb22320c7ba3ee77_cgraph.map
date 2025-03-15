@@ -1,0 +1,15 @@
+<map id="initEvents" name="initEvents">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,81,92,107"/>
+<area shape="rect" id="Node000002" href="$de/deb/events_8c.html#a23276d1145e6335ce7579bbbd6c27404" title=" " alt="" coords="140,81,259,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,91,126,91,126,97,92,97"/>
+<area shape="rect" id="Node000003" href="$de/deb/events_8c.html#a3145169f83f9dc878adef2f12da419af" title=" " alt="" coords="307,5,441,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="228,79,330,34,333,39,231,84"/>
+<area shape="rect" id="Node000004" href="$da/d39/exit_handler_8c.html#a7b17e5913b7dff48eec9ba3976ccfd3c" title=" " alt="" coords="489,56,536,81"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="259,87,475,69,476,74,259,92"/>
+<area shape="rect" id="Node000005" href="$de/deb/events_8c.html#a4314c765f6bbd615a94286919f475f41" title=" " alt="" coords="319,107,429,132"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="259,100,306,107,305,112,259,105"/>
+<area shape="rect" id="Node000006" href="$de/df1/util_8c.html#a2a788020b8916d13ec26d4ad01c225f9" title=" " alt="" coords="335,156,413,181"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="228,104,308,141,326,149,324,153,306,146,225,109"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="411,28,477,53,475,58,409,33"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="412,155,440,141,469,117,492,90,496,94,472,121,443,146,414,160"/>
+</map>
