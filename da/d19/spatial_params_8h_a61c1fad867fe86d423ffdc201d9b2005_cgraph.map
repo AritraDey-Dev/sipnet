@@ -1,7 +1,0 @@
-<map id="initializeOneSpatialParam" name="initializeOneSpatialParam">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,196,56"/>
-<area shape="rect" id="Node000002" href="$dd/dda/spatial_params_8c.html#ae6dfc60182b4583f79733354cbe3680d" title=" " alt="" coords="244,5,395,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,30,230,26,230,31,196,35"/>
-<area shape="rect" id="Node000003" href="$da/d39/exit_handler_8c.html#a7b17e5913b7dff48eec9ba3976ccfd3c" title=" " alt="" coords="296,55,343,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="196,51,282,61,282,66,196,56"/>
-</map>
