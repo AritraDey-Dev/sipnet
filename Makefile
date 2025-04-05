@@ -60,12 +60,8 @@ exec: estimate sipnet transpose subsetData histutil
 # with the default set to 'sipnet', we can have all do (close to) everything
 all: exec document
 
-# Only update docs if source files or Doxyfile have changed
+# Build documentation with both Doxygen and Mkdocs
 document: .doxygen.stamp .mkdocs.stamp
-
-# Reminder: this is the implicit build command
-# %.o: %.c
-# 	$(CC) $(CFLAGS) -c $< -o $@
 
 # Only update docs if source files or Doxyfile have changed
 .doxygen.stamp: $(DOXYFILE) $(CFILES)
@@ -147,7 +143,7 @@ help:
 	@echo "  estimate     - Build the estimate executable (estimates parameters using MCMC); see estimate.in in the "
 	@echo "                 src/estimate directory for sample input file"
 	@echo "  exec         - Build the above executables and all utilities (see below)"
-	@echo "  document     - Generate documentation (via doxygen)"
+	@echo "  document     - Generate documentation (via doxygen and mkdocs)"
 	@echo "  all          - Build all above executables and the documentation"
 	@echo "  clean        - Remove compiled files, executables, and documentation"
 	@echo "  depend       - Generate build dependency information for source files and append to Makefile"
@@ -166,4 +162,3 @@ depend::
 	makedepend $(CFILES)
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
-
