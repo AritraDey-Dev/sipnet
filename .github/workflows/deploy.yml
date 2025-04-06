@@ -3,7 +3,7 @@ name: Publish Documentation
 on:
   push:
     branches:
-      - "master"
+      - "*"
 
 jobs:
   build:
@@ -21,11 +21,11 @@ jobs:
           pip install mkdocs mkdocs-material
 
       - name: Generate Documentation
-        run: make document
+        run: doxygen docs/Doxyfile
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: site  
+          publish_dir: docs/html  
