@@ -1,7 +1,0 @@
-<map id="checkLocations" name="checkLocations">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,128,56"/>
-<area shape="rect" id="Node000002" href="$da/d39/exit_handler_8c.html#a7b17e5913b7dff48eec9ba3976ccfd3c" title=" " alt="" coords="207,5,253,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="128,31,193,21,194,26,129,36"/>
-<area shape="rect" id="Node000003" href="$d9/d49/subset_data_8c.html#a5b0abd5931b15a92fa27271b98d837d4" title=" " alt="" coords="176,55,284,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="129,50,163,55,162,60,128,55"/>
-</map>
