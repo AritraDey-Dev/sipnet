@@ -18,7 +18,7 @@ jobs:
 
       - name: Install MkDocs
         run: |
-          pip install mkdocs mkdocs-material mkdocs-mathjax
+          pip install mkdocs mkdocs-material 
 
       - name: Generate Documentation
         run: make document
