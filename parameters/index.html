@@ -58,7 +58,7 @@
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../html/">API Reference</a>
+                <li class="toctree-l1"><a class="reference internal" href="../api/">API Reference</a>
                 </li>
               </ul>
               <ul>
@@ -208,7 +208,7 @@
 </tr>
 <tr>
 <td>$f$</td>
-<td>Fraction</td>
+<td>The fraction of a pool or flux other than NPP</td>
 </tr>
 <tr>
 <td>$F$</td>
@@ -228,7 +228,7 @@
 </tr>
 <tr>
 <td>$\alpha$</td>
-<td>Allocation fraction</td>
+<td>The fraction of NPP allocated to a plant pool</td>
 </tr>
 <tr>
 <td>$k$</td>
@@ -368,14 +368,6 @@
 <td>multiply by SLW to get initial plant leaf C: $C_{\text{leaf},0} = LAI_0 \cdot SLW$</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
 <td>3</td>
 <td>$C_{\text{litter},0}$</td>
 <td>litterInit</td>
@@ -433,18 +425,18 @@
 </tr>
 <tr>
 <td></td>
-<td>$C_{\text{fine root},0}$</td>
+<td>$f_{\text{fine root},0}$</td>
 <td>fineRootFrac</td>
-<td>Initial fine root carbon</td>
-<td>g C m$^{-2}$</td>
+<td>Fraction of <code>plantWoodInit</code> allocated to initial fine root carbon pool</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
 <td></td>
-<td>$C_{\text{coarse root},0}$</td>
+<td>$f_{\text{coarse root},0}$</td>
 <td>coarseRootFrac</td>
-<td>Initial coarse root carbon</td>
-<td>g C m$^{-2}$</td>
+<td>Fraction of <code>plantWoodInit</code> allocated to initial coarse root carbon pool</td>
+<td></td>
 <td></td>
 </tr>
 </tbody>
@@ -1678,11 +1670,46 @@
 <li>notes: could also alter bulk density and other soil properties</li>
 </ul>
 <h4 id="planting-events">Planting Events</h4>
+<table>
+<thead>
+<tr>
+<th>parameter</th>
+<th style="text-align: center;">col</th>
+<th style="text-align: center;">req?</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>leaf-C</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">Y</td>
+<td>C added to leaf pool (g C / m2)</td>
+</tr>
+<tr>
+<td>wood-C</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">Y</td>
+<td>C added to above-ground wood pool (g C / m2)</td>
+</tr>
+<tr>
+<td>fine-root-C</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">Y</td>
+<td>C added to fine root pool (g C / m2)</td>
+</tr>
+<tr>
+<td>coarse-root-C</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">Y</td>
+<td>C added to coarse root pool (g C / m2)</td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li>model representation: </li>
-<li>Other than <code>event_type = plant</code>, there are no additional parameters.</li>
-<li>Emergence date is defined as the date on which $LAI=0.15$</li>
-<li>Leaf $C$ is calculated from $SLW$ and other pools are calculated from allocation parameters $\alpha$</li>
+<li>Date of event is the date of emergence, not the date of actual planting </li>
+<li>Increases size of carbon pools by the amount of each respective parameter</li>
 <li>$N$ pools are calculated from $CN$ stoichiometric ratios.</li>
 <li>notes: PFT (crop type) is not an input parameter for a planting event because SIPNET only represents a single PFT.</li>
 </ul>
@@ -1732,9 +1759,9 @@
 </ul>
 <h4 id="example-of-events-file">Example of events file:</h4>
 <pre><code>1  2022  40  irrig  5   1        # 5cm canopy irrigation on day 40
-1  2022  40  fert   100 50 0 0   # fertilized with 10 g / m2 NO3-N and 5 g / m2 NH4-N on day 40
+1  2022  40  fert   10 5 0 0     # fertilized with 10 g / m2 NO3-N and 5 g / m2 NH4-N on day 40
 1  2022  35  till   0.2 0.3      # tilled on day 35, soil organic matter pool decomposition rate increases by 20% and soil litter pool decomposition rate increases by 30% 
-1  2022  50  plant       # planting - emergence occurs on day 50
+1  2022  50  plant  10 3 2 5     # plant emergence on day 50 with 10/3/2/4 g C / m2, respectively, added to the leaf/wood/fine root/coarse root pools 
 1  2022  250 harv   0.1          # harvest 10% of aboveground plant biomass on day 250
 </code></pre>
 <h2 id="outputs">Outputs</h2>

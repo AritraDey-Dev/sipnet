@@ -84,7 +84,7 @@
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../html/">API Reference</a>
+                <li class="toctree-l1"><a class="reference internal" href="../api/">API Reference</a>
                 </li>
               </ul>
               <ul>
@@ -151,7 +151,8 @@ to ensure code consistency and prevent (some) bad coding practices. Each tool ha
 <p><strong>clang-format</strong> is run on each modified C-language file on commit; the commit will fail if any of the format checks fail.
 To fix these errors:
 * if all changes are staged (via <code>git add</code>), run the command <code>git clang-format</code> to fix the formatting and re-commit
-* if not all changes are staged (likely a <code>git commit -a</code> command), either <code>git add</code> all the changes, or try <code>git clang-format -f</code> to reformat all modified files</p>
+* if not all changes are staged (likely a <code>git commit -a</code> command), either <code>git add</code> all the changes, or try <code>git clang-format -f</code> to reformat all modified files
+* <code>clang-format</code> may also be run outside of <code>git</code>, as a means of updating a file's format regardless of modification status (see <code>clang-format --help</code>)</p>
 <p><strong>clang-tidy</strong> is one of the checks run on PR submission (along with building and testing) via the <a href="https://cpp-linter.github.io/cpp-linter-action/">cpp-linter</a> 
 github action. If this action fails, a comment will be made in the PR detailing the issues found. <strong>clang-format</strong> is 
 also run by this action, so formatting issues that might have been bypassed on commit will be found here. You may attempt to have clang-tidy 
@@ -200,7 +201,7 @@ tests/update_model_structures.sh
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../developer-guide/code-structure/" class="btn btn-neutral float-left" title="Code Structure"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../html/" class="btn btn-neutral float-right" title="API Reference">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../api/" class="btn btn-neutral float-right" title="API Reference">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -226,7 +227,7 @@ tests/update_model_structures.sh
       <span><a href="../developer-guide/code-structure/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../html/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../api/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
