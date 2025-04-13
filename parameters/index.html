@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Input and Output Parameters (DRAFT) - SIPNET Documentation</title>
+    <title>Parameters - SIPNET Documentation</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Input and Output Parameters (DRAFT)";
+        var mkdocs_page_name = "Parameters";
         var mkdocs_page_input_path = "parameters.md";
         var mkdocs_page_url = null;
       </script>
@@ -21,7 +21,22 @@
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-      <script>hljs.highlightAll();</script> 
+      <script>hljs.highlightAll();</script>
+   
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -41,6 +56,80 @@
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
                 <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Parameters</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#table-of-contents">Table of Contents</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#notation">Notation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#variables-pools-fluxes-and-parameters">Variables (Pools, Fluxes, and Parameters)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#subscripts-temporal-spatial-or-contextual-identifiers">Subscripts (Temporal, Spatial, or Contextual Identifiers)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#run-time-parameters">Run-time Parameters</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#initial-state-values">Initial state values</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#litter-quality-parameters">Litter Quality Parameters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#photosynthesis-parameters">Photosynthesis parameters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#phenology-related-parameters">Phenology-related parameters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#allocation-parameters">Allocation parameters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#autotrophic-respiration-parameters">Autotrophic respiration parameters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#soil-respiration-parameters">Soil respiration parameters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#nitrogen-cycle-parameters">Nitrogen Cycle Parameters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#methane-parameters">Methane parameters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#moisture-related-parameters">Moisture-related parameters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tree-physiological-parameters">Tree physiological parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#compile-time-parameters">Compile-time parameters</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#drivers">Drivers</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#climate">Climate</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#examples-of-climate-files">Examples of climate files:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#agronomic-events">Agronomic Events</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#fertilization-events">Fertilization Events</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#tillage-events">Tillage Events</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#planting-events">Planting Events</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#harvest-events">Harvest Events</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-events-file">Example of events file:</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#outputs">Outputs</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../model-structure/">Model Specification</a>
                 </li>
               </ul>
               <p class="caption"><span class="caption-text">User Guide</span></p>
@@ -83,7 +172,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Input and Output Parameters (DRAFT)</li>
+      <li class="breadcrumb-item active">Parameters</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -1999,6 +2088,10 @@ TODO: update and move the following terms used in model description to appropria
               
             </div>
           </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../model-structure/" class="btn btn-neutral float-right" title="Model Specification">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
 
   <hr/>
 
@@ -2020,6 +2113,10 @@ TODO: update and move the following terms used in model description to appropria
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../model-structure/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
@@ -2027,6 +2124,8 @@ TODO: update and move the following terms used in model description to appropria
     <script>var base_url = "..";</script>
     <script src="../js/theme_extra.js"></script>
     <script src="../js/theme.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       <script src="../search/main.js"></script>
     <script>
         jQuery(function () {

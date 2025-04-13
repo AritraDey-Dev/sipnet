@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Model structure - SIPNET Documentation</title>
+    <title>Model Specification - SIPNET Documentation</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Model structure";
+        var mkdocs_page_name = "Model Specification";
         var mkdocs_page_input_path = "model-structure.md";
         var mkdocs_page_url = null;
       </script>
@@ -21,7 +21,22 @@
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-      <script>hljs.highlightAll();</script> 
+      <script>hljs.highlightAll();</script>
+   
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -41,6 +56,148 @@
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
                 <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../parameters/">Parameters</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Model Specification</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#design-approach">Design approach:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#notes-on-notation">Notes on notation:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#scope">Scope</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mathfrakproposed-features">$\mathfrak{Proposed \ Features}$</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#carbon-dynamics">Carbon Dynamics</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#maximum-photosynthetic-rate">Maximum Photosynthetic Rate</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#potential-photosynthesis">Potential Photosynthesis</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#adjusted-gross-primary-production">Adjusted Gross Primary Production</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#plant-growth">Plant Growth</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#plant-death">Plant Death</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#wood-carbon">Wood Carbon</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#leaf-carbon">Leaf Carbon</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#leaf-maintenance-respiration">Leaf Maintenance Respiration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#wood-maintenance-respiration">Wood Maintenance Respiration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#litter-carbon">Litter Carbon</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#soil-carbon">Soil Carbon</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#heterotrophic-respiration-c_textsoillitter-rightarrow-co_2">Heterotrophic Respiration $(C_\text{soil,litter} \rightarrow CO_2)$</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#frakmethane-production-c-rightarrow-ch_4">$\frak{Methane \ Production \ (C \rightarrow CH_4)}$</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#frakcarbonnitrogen-ratio-dynamics-cn">$\frak{Carbon:Nitrogen \ Ratio \ Dynamics (CN)}$</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#frakfixed-plant-cn-ratios">$\frak{Fixed \ Plant \ C:N \ Ratios}$</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#frakdynamic-soil-organic-matter-and-litter-cn-ratios">$\frak{Dynamic \ Soil \ Organic \ Matter \ and \ Litter \ C:N \ Ratios}$</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#frakcn-dependency-function-d_cn">$\frak{C:N \ Dependency \ Function \ (D_{CN})}$</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#fraknitrogen-dynamics-fracdndt">$\frak{Nitrogen \ Dynamics (\frac{dN}{dt})}$</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#frakplant-biomass-nitrogen">$\frak{Plant \ Biomass \ Nitrogen}$</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fraklitter-nitrogen">$\frak{Litter \ Nitrogen}$</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fraksoil-organic-nitrogen">$\frak{Soil \ Organic \ Nitrogen}$</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fraksoil-mineral-nitrogen-fn_textmin">$\frak{Soil \ Mineral \ Nitrogen \ F^N_\text{min}}$</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#frakn-mineralization-fn_textmin">$\frak{N \ Mineralization \ (F^N_\text{min})}$</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fraknitrogen-volatilization-fn_textvol-n_textminsoil-rightarrow-n_2o">$\frak{Nitrogen \ Volatilization \ F^N_\text{vol}: (N_\text{min,soil} \rightarrow N_2O)}$</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fraknitrogen-leaching-fn_textleach">$\frak{Nitrogen \ Leaching \ F^N_\text{leach}}$</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fraknitrogen-fixation-fn_textfix">$\frak{Nitrogen \ Fixation \ F^N_\text{fix}}$</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#frakplant-nitrogen-uptake-fn_textuptake">$\frak{Plant \ Nitrogen \ Uptake \ F^N_\text{uptake}}$</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#fraknitrogen-limitation-indicator-function-mathfraki_textn-limit">$\frak{Nitrogen \ Limitation \ Indicator \ Function \mathfrak{I_{\text{N limit}}}}$</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#water-dynamics">Water Dynamics</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#soil-water-storage">Soil Water Storage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#drainage">Drainage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#transpiration">Transpiration</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#water-use-efficiency-wue">Water Use Efficiency (WUE)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#potential-transpiration">Potential Transpiration</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#actual-transpiration">Actual Transpiration</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#dependence-functions-for-temperature-and-moisture">Dependence Functions for Temperature and Moisture</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#temperature-dependence-functions-d_texttemp">Temperature Dependence Functions $D_\text{temp}$</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#parabolic-function-for-photosynthesis-d_texttemp-a">Parabolic Function for Photosynthesis $D_\text{temp, A}$</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#exponential-function-for-respiration-d_texttempq10">Exponential Function for Respiration $D_{\text(temp,Q10)}$</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#moisture-dependence-functions-d_water">Moisture dependence functions $D_{water}$</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#soil-water-content-fraction">Soil Water Content Fraction</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#water-stress-factor">Water Stress Factor</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#soil-respiration-moisture-dependence-d_textwaterr_h">Soil Respiration Moisture Dependence $(D_{\text{water,}R_H})$</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#frakmoisture-dependence-for-anaerobic-metabolism-with-soil-moisture-optimum">$\frak{Moisture \ Dependence \ For \ Anaerobic \ Metabolism \ with \ Soil \ Moisture \ Optimum}$</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#frakagronomic-management-events">$\frak{Agronomic \ Management \ Events}$</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#frakfertilizer-and-organic-matter-additions">$\frak{Fertilizer \ and \ Organic \ Matter \ Additions}$</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fraktillage">$\frak{Tillage}$</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#frakplanting-and-emergence">$\frak{Planting \ and \ Emergence}$</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#frakharvest">$\frak{Harvest}$</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#frakirrigation">$\frak{Irrigation}$</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#references">References</a>
+    </li>
+    </ul>
                 </li>
               </ul>
               <p class="caption"><span class="caption-text">User Guide</span></p>
@@ -83,7 +240,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Model structure</li>
+      <li class="breadcrumb-item active">Model Specification</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -537,6 +694,10 @@ $$
               
             </div>
           </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../parameters/" class="btn btn-neutral float-left" title="Parameters"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../user-guide/running-sipnet/" class="btn btn-neutral float-right" title="Running SIPNET">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
 
   <hr/>
 
@@ -558,6 +719,10 @@ $$
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
+      <span><a href="../parameters/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../user-guide/running-sipnet/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
@@ -565,6 +730,8 @@ $$
     <script>var base_url = "..";</script>
     <script src="../js/theme_extra.js"></script>
     <script src="../js/theme.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       <script src="../search/main.js"></script>
     <script>
         jQuery(function () {

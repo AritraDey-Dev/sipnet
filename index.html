@@ -21,7 +21,22 @@
       <script src="js/html5shiv.min.js"></script>
     <![endif]-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-      <script>hljs.highlightAll();</script> 
+      <script>hljs.highlightAll();</script>
+   
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -59,6 +74,14 @@
     <li class="toctree-l2"><a class="reference internal" href="#license">License</a>
     </li>
     </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="parameters/">Parameters</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="model-structure/">Model Specification</a>
                 </li>
               </ul>
               <p class="caption"><span class="caption-text">User Guide</span></p>
@@ -140,7 +163,7 @@ runs.</p>
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="user-guide/running-sipnet/" class="btn btn-neutral float-right" title="Running SIPNET">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="parameters/" class="btn btn-neutral float-right" title="Parameters">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -164,7 +187,7 @@ runs.</p>
     
     
     
-      <span><a href="user-guide/running-sipnet/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="parameters/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
@@ -172,6 +195,8 @@ runs.</p>
     <script>var base_url = ".";</script>
     <script src="js/theme_extra.js"></script>
     <script src="js/theme.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       <script src="search/main.js"></script>
     <script>
         jQuery(function () {
@@ -184,5 +209,5 @@ runs.</p>
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2025-04-13 11:33:13.780297+00:00
+Build Date UTC : 2025-04-13 17:32:00.447131+00:00
 -->
