@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['aggregateinfo_0',['AggregateInfo',['../d7/d0b/paramchange_8c.html#ad994bf7a10d3a8e76f2b2a4bb9ce8ead',1,'paramchange.c']]]
+  ['climatenode_0',['ClimateNode',['../dd/d09/sipnet_8c.html#aed561e4afbcb4dd662b119e22716d716',1,'sipnet.c']]],
+  ['context_5fsource_5ft_1',['context_source_t',['../dc/d1e/context_8h.html#a45b732a6dd7841b52c09c5ccf92f751d',1,'context.h']]],
+  ['context_5ftype_5ft_2',['context_type_t',['../dc/d1e/context_8h.html#aa832a4ffef8b3853d7a89a1993af3f0e',1,'context.h']]]
 ];

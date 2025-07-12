@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['parameters_0',['Parameters',['../d0/dbf/struct_parameters.html',1,'']]],
-  ['phenologytrackersstruct_1',['PhenologyTrackersStruct',['../d4/d42/struct_phenology_trackers_struct.html',1,'']]],
-  ['plantingparams_2',['PlantingParams',['../d4/dbd/struct_planting_params.html',1,'']]]
+  ['tillageparams_0',['TillageParams',['../d0/dbb/struct_tillage_params.html',1,'']]],
+  ['trackervars_1',['TrackerVars',['../d3/d1f/struct_tracker_vars.html',1,'']]]
 ];

@@ -9,14 +9,14 @@
       
       
       
-        <link rel="prev" href="../developer-guide/code-structure/">
+        <link rel="prev" href="../developer-guide/logging/">
       
       
         <link rel="next" href="../api/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
@@ -24,7 +24,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -53,7 +56,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="light-green">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -105,6 +115,18 @@
       </div>
     </div>
     
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="light-green"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
@@ -151,6 +173,18 @@
       
     
     
+      <div class="md-header__source">
+        <a href="https://github.com/PecanProject/sipnet" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
   </nav>
   
 </header>
@@ -184,6 +218,18 @@
     </a>
     SIPNET Documentation
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/PecanProject/sipnet" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -429,6 +475,52 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developer-guide/cli-options/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Adding New Command Line Options
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developer-guide/logging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Logging
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -535,26 +627,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#code-format-and-style" class="md-nav__link">
+  <a href="#code-format-style" class="md-nav__link">
     <span class="md-ellipsis">
-      Code Format and Style
+      Code Format &amp; Style
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Code Format and Style">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#clang-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      Clang Tools
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -564,6 +641,21 @@
       Documentation
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#building-the-documentation-with-mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building the Documentation with mkdocs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -737,26 +829,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#code-format-and-style" class="md-nav__link">
+  <a href="#code-format-style" class="md-nav__link">
     <span class="md-ellipsis">
-      Code Format and Style
+      Code Format &amp; Style
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Code Format and Style">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#clang-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      Clang Tools
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -766,6 +843,21 @@
       Documentation
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#building-the-documentation-with-mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building the Documentation with mkdocs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -811,19 +903,39 @@
                   
 
 
+  
+    <a href="https://github.com/PecanProject/sipnet/edit/master/docs/CONTRIBUTING.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
+    </a>
+  
+  
+
 
 <h1 id="contributing-to-sipnet">Contributing to SIPNET<a class="headerlink" href="#contributing-to-sipnet" title="Permanent link">&para;</a></h1>
 <p>We welcome contributions to SIPNET. This document outlines the process for contributing to the SIPNET project.</p>
 <p>All contributors are expected to adhere to the PEcAn Project <a href="https://github.com/PecanProject/pecan/blob/develop/CODE_OF_CONDUCT.md">Code of Conduct</a>.</p>
 <h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
-<p>If changes are intended for any C-code files, please execute this command:</p>
-<pre><code class="language-shell">tools/setup.sh
-</code></pre>
-<p>to run the setup script, which will:
-1. Check to make sure that python is installed and is at least version 3.8
-2. Ensure that clang-format and clang-tidy are installed (and install them if running on MacOS)
-3. Install the pre-commit hook, which checks the format of modified C files. This will help prevent PR failures due to formatting issues by finding those issues earlier.</p>
-<p>Note: This step is not necessary for changes to documentation, markdown files, config, etc.</p>
+<ol>
+<li>Clone this repository:</li>
+</ol>
+<p><code>bash
+   git clone git@github.com:PecanProject/sipnet</code></p>
+<ol>
+<li>Run the setup script (once per clone):</li>
+</ol>
+<p><code>bash
+   tools/setup.sh</code></p>
+<p>The <code>tools/setup.sh</code> script verifies that Python ≥ 3.8 is available,
+ensures that <code>clang-format</code>, <code>clang-tidy</code>, and <code>git clang-format</code> are
+installed (it automatically installs them on macOS and prints installation
+instructions for Ubuntu/Debian), and then copies the clang pre‑commit hook into
+<code>.git/hooks</code>. </p>
+<p>The pre-commit hook will check formatting on every commit; if issues are found it
+aborts the commit so you can run <code>git clang-format</code> and re‑stage the
+changes.</p>
+<p><em>Note – running the script is unnecessary for documentation‑only edits,
+but it will save you time whenever you touch C/C++ code.</em></p>
 <h2 id="github-workflow">GitHub Workflow<a class="headerlink" href="#github-workflow" title="Permanent link">&para;</a></h2>
 <h4 id="branches">Branches<a class="headerlink" href="#branches" title="Permanent link">&para;</a></h4>
 <p>The <code>master</code> branch is the default branch for SIPNET. Development should be done in feature branches. Feature branches should be named to clearly indicate the purpose, and may be combined with an associated issue, e.g. <code>ISSUE#-feature-name</code>.</p>
@@ -836,28 +948,69 @@
 - Include updates and additions to 
   - Documentation
   - Tests
-  - CHANGELOG.md </p>
-<p>Pull requests must pass all required checks to be merged into master, including <a href="#code-format-and-style">code format and style</a> checks.</p>
-<h2 id="code-format-and-style">Code Format and Style<a class="headerlink" href="#code-format-and-style" title="Permanent link">&para;</a></h2>
-<h3 id="clang-tools">Clang Tools<a class="headerlink" href="#clang-tools" title="Permanent link">&para;</a></h3>
-<p>This repo uses <a href="https://clang.llvm.org/docs/ClangFormat.html">clang-format</a> and <a href="https://clang.llvm.org/extra/clang-tidy/index.html">clang-tidy</a>
-to ensure code consistency and prevent (some) bad coding practices. Each tool has a configuration file in the repo root directory.</p>
-<p><strong>clang-format</strong> is run on each modified C-language file on commit; the commit will fail if any of the format checks fail.
-To fix these errors:
-* if all changes are staged (via <code>git add</code>), run the command <code>git clang-format</code> to fix the formatting and re-commit
-* if not all changes are staged (likely a <code>git commit -a</code> command), either <code>git add</code> all the changes, or try <code>git clang-format -f</code> to reformat all modified files
-* <code>clang-format</code> may also be run outside of <code>git</code>, as a means of updating a file's format regardless of modification status (see <code>clang-format --help</code>)</p>
-<p><strong>clang-tidy</strong> is one of the checks run on PR submission (along with building and testing) via the <a href="https://cpp-linter.github.io/cpp-linter-action/">cpp-linter</a> 
-github action. If this action fails, a comment will be made in the PR detailing the issues found. <strong>clang-format</strong> is 
-also run by this action, so formatting issues that might have been bypassed on commit will be found here. You may attempt to have clang-tidy 
-automatically fix clang-tidy issues with the command:<br>
-<code>clang-tidy --fix &lt;filename&gt;</code></p>
+  - CHANGELOG.md
+  - For new model features related to the structure, remove relevant <code>\fraktur</code> font formatting from <code>docs/model-structure.md</code> to indicate that the feature has been implemented.</p>
+<p>Pull requests must pass all required checks to be merged into master, including the code format and style checks described below.</p>
+<h2 id="code-format-style">Code Format &amp; Style<a class="headerlink" href="#code-format-style" title="Permanent link">&para;</a></h2>
+<p>We follow the standard LLVM/Clang formatting rules. Formatting is automatic, and you rarely have to think about them:</p>
+<ol>
+<li>
+<p><strong>Run the setup script once</strong> (see <em>Setup</em> above).<br />
+   It installs a <strong>pre‑commit hook</strong> that blocks any commit whose C/C++
+   files are not already formatted.</p>
+</li>
+<li>
+<p><strong>If the hook stops your commit</strong>, run:</p>
+</li>
+</ol>
+<p><code>bash
+   # format only what you just staged
+   git clang-format
+   # restage fixes and commit again
+   git add -u
+   git commit</code>
+If <code>git clang-format</code> fails because not all changes are staged (likely a <code>git commit -a</code> command), either <code>git add</code> all the changes, or try <code>git clang-format -f</code> to reformat all modified files
+3. <strong>clang‑tidy static analysis</strong> runs automatically in CI.<br />
+    If the bot leaves comments, adjust your code as instructed and push.</p>
+<pre><code>To run `clang-tidy` manually before committing or pushing changes, use the following command from the project root:
+
+```bash
+# Replace &lt;path/to/filename.c&gt; with the file you want to check
+clang-tidy &lt;path/to/filename.c&gt;
+```
+</code></pre>
+<p>The hook and CI will tell you what to fix.</p>
 <h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h2>
 <p>What goes in <strong>Doxygen</strong>:
 - Documentation for functions, classes, and parameters.</p>
 <p>What goes in <strong>docs/*md</strong>:
 - User guides and tutorials.
 - Documentation of equations, theoretical basis, and parameters.</p>
+<h3 id="building-the-documentation-with-mkdocs">Building the Documentation with <code>mkdocs</code><a class="headerlink" href="#building-the-documentation-with-mkdocs" title="Permanent link">&para;</a></h3>
+<p>Documentation is located at https://pecanproject.github.io/sipnet/, and can be rebuilt using <code>mkdocs</code>. A brief summary 
+of use is listed here, or see the Getting Started page for <code>mkdocs</code> <a href="https://www.mkdocs.org/getting-started/">here</a> for
+more information. </p>
+<p>Issue the following command to install <code>mkdocs</code> and the third-party extensions usedin SIPNET:</p>
+<pre><code>pip install mkdocs mkdocs-material pymdown-extensions
+</code></pre>
+<p>The <code>material</code> theme can be found <a href="https://github.com/squidfunk/mkdocs-material">here</a>.</p>
+<p>MkDocs comes with a built-in dev-server that lets you preview your documentation as you work on it. Make sure you're 
+in the same directory as the mkdocs.yml configuration file, and then start the server by running the mkdocs serve 
+command:</p>
+<pre><code>$ mkdocs serve
+INFO    -  Building documentation...
+INFO    -  Cleaning site directory
+INFO    -  Documentation built in 0.22 seconds
+INFO    -  [15:50:43] Watching paths for changes: 'docs', 'mkdocs.yml'
+INFO    -  [15:50:43] Serving on http://127.0.0.1:8000/
+</code></pre>
+<p>Open up http://127.0.0.1:8000/ in your browser, and you'll see the documentation home page.</p>
+<p>The dev-server also supports auto-reloading, and will rebuild your documentation whenever anything in the configuration
+file, documentation directory, or theme directory changes.</p>
+<p>If the structure of the documentation has changed (e.g., adding, moving, removing, or renaming pages), update <code>mkdocs.yml</code> in the root 
+directory to reflect these changes and issue this command to rebuild:</p>
+<pre><code>mkdocs build
+</code></pre>
 <h2 id="compiling-sipnet-binaries">Compiling SIPNET binaries<a class="headerlink" href="#compiling-sipnet-binaries" title="Permanent link">&para;</a></h2>
 <p>SIPNET uses <code>make</code> to build the model and documentation. There are also miscellaneous targets for running analysis workflows:</p>
 <pre><code class="language-sh"># build SIPNET executable
@@ -879,16 +1032,18 @@ make testrun
 # Clean after tests are run
 make testclean
 </code></pre>
-<p>If changes are made to the <code>modelStructure.h</code> file and unit tests are failing, try running the update script as shown below. Consider running this script even if unit tests <em>are not</em> failing.</p>
-<pre><code class="language-shell"># Run this command from the root directory to update unit test versions of modelStructures.h
-tests/update_model_structures.sh
-</code></pre>
 <h2 id="releases">Releases<a class="headerlink" href="#releases" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Use <a href="https://semver.org/">Semantic Versioning v2</a> for SIPNET releases.</li>
 <li>Tag releases with the version number <code>vX.Y.Z</code>.</li>
-<li>Include content from <code>CHANGELOG.md</code> file.</li>
-<li>Add compiled SIPNET binaries.</li>
+<li>Update version in the following files:<ul>
+<li><code>CITATION.cff</code></li>
+<li><code>src/sipnet/version.h</code></li>
+<li><code>docs/CHANGELOG.md</code></li>
+<li>Update <code>PROJECT_NUMBER</code> in <code>docs/Doxyfile</code></li>
+</ul>
+</li>
+<li>Include content from <code>docs/CHANGELOG.md</code> file in release description.</li>
 </ul>
 
 
@@ -938,10 +1093,10 @@ tests/update_model_structures.sh
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.action.edit"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

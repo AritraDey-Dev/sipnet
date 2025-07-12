@@ -5,7 +5,7 @@ var searchData=
   ['rain_2',['rain',['../da/d95/struct_flux_vars.html#ad932dca54e1d9164621e6b94caa80f25',1,'FluxVars']]],
   ['rcoarseroot_3',['rCoarseRoot',['../da/d95/struct_flux_vars.html#a0110ff60230e29109a0caa80702243b3',1,'FluxVars']]],
   ['rdconst_4',['rdConst',['../d0/dbf/struct_parameters.html#afcecee4adf46ef1ec9584e5244f392e3',1,'Parameters']]],
-  ['readindices_5',['readIndices',['../d3/dc0/struct_spatial_params_struct.html#ac64cdc6bcf07f1f4d8933c7dee9d7c08',1,'SpatialParamsStruct']]],
+  ['readindices_5',['readIndices',['../d8/dae/struct_model_params_struct.html#ac6baf06d3c8ecd440e23e749b9f91364',1,'ModelParamsStruct']]],
   ['rfineroot_6',['rFineRoot',['../da/d95/struct_flux_vars.html#a9f991b27d3f5893a6d8a004b5a608f8d',1,'FluxVars']]],
   ['rh_7',['rh',['../d3/d1f/struct_tracker_vars.html#a27653e854114e74b6d5aec17ff5b4037',1,'TrackerVars']]],
   ['rleaf_8',['rLeaf',['../da/d95/struct_flux_vars.html#ac0f8b0bf99efb773e8f67443121bdd86',1,'FluxVars']]],
