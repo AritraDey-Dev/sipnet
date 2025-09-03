@@ -2,6 +2,10 @@
 \label{struct_flux_vars}\index{FluxVars@{FluxVars}}
 
 
+{\ttfamily \#include $<$state.\+h$>$}
+
+
+
 Collaboration diagram for Flux\+Vars\+:
 \nopagebreak
 \begin{figure}[H]
@@ -15,47 +19,35 @@ Collaboration diagram for Flux\+Vars\+:
 \item 
 double \textbf{ photosynthesis}
 \item 
-double \textbf{ leaf\+Creation}
-\item 
 double \textbf{ leaf\+Litter}
 \item 
 double \textbf{ wood\+Litter}
 \item 
 double \textbf{ r\+Veg}
 \item 
-double \textbf{ litter\+To\+Soil}
-\item 
-double \textbf{ r\+Litter}
-\item 
 double \textbf{ r\+Soil}
 \item 
 double \textbf{ rain}
 \item 
-double \textbf{ snow\+Fall}
+double \textbf{ transpiration}
 \item 
-double \textbf{ immed\+Evap}
+double \textbf{ drainage}
+\item 
+double \textbf{ litter\+To\+Soil}
+\item 
+double \textbf{ r\+Litter}
+\item 
+double \textbf{ snow\+Fall}
 \item 
 double \textbf{ snow\+Melt}
 \item 
 double \textbf{ sublimation}
 \item 
+double \textbf{ immed\+Evap}
+\item 
 double \textbf{ fast\+Flow}
 \item 
 double \textbf{ evaporation}
-\item 
-double \textbf{ top\+Drainage}
-\item 
-double \textbf{ bottom\+Drainage}
-\item 
-double \textbf{ transpiration}
-\item 
-double \textbf{ r\+Wood}
-\item 
-double \textbf{ r\+Leaf}
-\item 
-double \textbf{ maint\+Respiration}
-\item 
-double \textbf{ microbe\+Ingestion}
 \item 
 double \textbf{ fine\+Root\+Loss}
 \item 
@@ -65,38 +57,44 @@ double \textbf{ fine\+Root\+Creation}
 \item 
 double \textbf{ coarse\+Root\+Creation}
 \item 
-double \textbf{ wood\+Creation}
-\item 
 double \textbf{ r\+Coarse\+Root}
 \item 
 double \textbf{ r\+Fine\+Root}
 \item 
+double \textbf{ maint\+Respiration}
+\item 
+double \textbf{ microbe\+Ingestion}
+\item 
 double \textbf{ soil\+Pulse}
+\item 
+double \textbf{ leaf\+Creation}
+\item 
+double \textbf{ wood\+Creation}
+\item 
+double \textbf{ event\+LeafC}
+\item 
+double \textbf{ event\+WoodC}
+\item 
+double \textbf{ event\+Fine\+RootC}
+\item 
+double \textbf{ event\+Coarse\+RootC}
+\item 
+double \textbf{ event\+Evap}
+\item 
+double \textbf{ event\+Soil\+Water}
+\item 
+double \textbf{ event\+LitterC}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 
 
-Definition at line \textbf{ 367} of file \textbf{ sipnet.\+c}.
+Definition at line \textbf{ 378} of file \textbf{ state.\+h}.
 
 
 
 \doxysubsection{Field Documentation}
-\label{struct_flux_vars_a042e9c3261b34bc70be1a6f41256edcc} 
-\index{FluxVars@{FluxVars}!bottomDrainage@{bottomDrainage}}
-\index{bottomDrainage@{bottomDrainage}!FluxVars@{FluxVars}}
-\doxysubsubsection{bottomDrainage}
-{\footnotesize\ttfamily double Flux\+Vars\+::bottom\+Drainage}
-
-
-
-Definition at line \textbf{ 390} of file \textbf{ sipnet.\+c}.
-
-
-
-Referenced by \textbf{ calculate\+Fluxes()}, and \textbf{ update\+State()}.
-
 \label{struct_flux_vars_a76d3a7ca4bff86b4d697ea059b2dc231} 
 \index{FluxVars@{FluxVars}!coarseRootCreation@{coarseRootCreation}}
 \index{coarseRootCreation@{coarseRootCreation}!FluxVars@{FluxVars}}
@@ -105,7 +103,7 @@ Referenced by \textbf{ calculate\+Fluxes()}, and \textbf{ update\+State()}.
 
 
 
-Definition at line \textbf{ 410} of file \textbf{ sipnet.\+c}.
+Definition at line \textbf{ 457} of file \textbf{ state.\+h}.
 
 
 
@@ -119,11 +117,25 @@ Referenced by \textbf{ calculate\+Fluxes()}, \textbf{ soil\+Degradation()}, and 
 
 
 
-Definition at line \textbf{ 407} of file \textbf{ sipnet.\+c}.
+Definition at line \textbf{ 453} of file \textbf{ state.\+h}.
 
 
 
 Referenced by \textbf{ calculate\+Fluxes()}, and \textbf{ soil\+Degradation()}.
+
+\label{struct_flux_vars_acb2f2d248c761d29abcca7c3242fd70e} 
+\index{FluxVars@{FluxVars}!drainage@{drainage}}
+\index{drainage@{drainage}!FluxVars@{FluxVars}}
+\doxysubsubsection{drainage}
+{\footnotesize\ttfamily double Flux\+Vars\+::drainage}
+
+
+
+Definition at line \textbf{ 417} of file \textbf{ state.\+h}.
+
+
+
+Referenced by \textbf{ calculate\+Fluxes()}, and \textbf{ update\+State()}.
 
 \label{struct_flux_vars_aadc31dee7abcba006826405092efa633} 
 \index{FluxVars@{FluxVars}!evaporation@{evaporation}}
@@ -133,11 +145,109 @@ Referenced by \textbf{ calculate\+Fluxes()}, and \textbf{ soil\+Degradation()}.
 
 
 
-Definition at line \textbf{ 387} of file \textbf{ sipnet.\+c}.
+Definition at line \textbf{ 444} of file \textbf{ state.\+h}.
 
 
 
 Referenced by \textbf{ calculate\+Fluxes()}, \textbf{ update\+State()}, and \textbf{ update\+Trackers()}.
+
+\label{struct_flux_vars_a121119760a58575da10ef0ded58f0abf} 
+\index{FluxVars@{FluxVars}!eventCoarseRootC@{eventCoarseRootC}}
+\index{eventCoarseRootC@{eventCoarseRootC}!FluxVars@{FluxVars}}
+\doxysubsubsection{eventCoarseRootC}
+{\footnotesize\ttfamily double Flux\+Vars\+::event\+Coarse\+RootC}
+
+
+
+Definition at line \textbf{ 503} of file \textbf{ state.\+h}.
+
+
+
+Referenced by \textbf{ process\+Events()}, \textbf{ reset\+Event\+Fluxes()}, and \textbf{ soil\+Degradation()}.
+
+\label{struct_flux_vars_ace93c59692d15a99205397f0671ab6dd} 
+\index{FluxVars@{FluxVars}!eventEvap@{eventEvap}}
+\index{eventEvap@{eventEvap}!FluxVars@{FluxVars}}
+\doxysubsubsection{eventEvap}
+{\footnotesize\ttfamily double Flux\+Vars\+::event\+Evap}
+
+
+
+Definition at line \textbf{ 505} of file \textbf{ state.\+h}.
+
+
+
+Referenced by \textbf{ process\+Events()}, \textbf{ reset\+Event\+Fluxes()}, and \textbf{ update\+Trackers()}.
+
+\label{struct_flux_vars_a894c0fecf778ddb0244c43c51c8cb613} 
+\index{FluxVars@{FluxVars}!eventFineRootC@{eventFineRootC}}
+\index{eventFineRootC@{eventFineRootC}!FluxVars@{FluxVars}}
+\doxysubsubsection{eventFineRootC}
+{\footnotesize\ttfamily double Flux\+Vars\+::event\+Fine\+RootC}
+
+
+
+Definition at line \textbf{ 501} of file \textbf{ state.\+h}.
+
+
+
+Referenced by \textbf{ process\+Events()}, \textbf{ reset\+Event\+Fluxes()}, and \textbf{ soil\+Degradation()}.
+
+\label{struct_flux_vars_a6643fb2f9f24257a29b988d07cd08a06} 
+\index{FluxVars@{FluxVars}!eventLeafC@{eventLeafC}}
+\index{eventLeafC@{eventLeafC}!FluxVars@{FluxVars}}
+\doxysubsubsection{eventLeafC}
+{\footnotesize\ttfamily double Flux\+Vars\+::event\+LeafC}
+
+
+
+Definition at line \textbf{ 497} of file \textbf{ state.\+h}.
+
+
+
+Referenced by \textbf{ process\+Events()}, \textbf{ reset\+Event\+Fluxes()}, and \textbf{ update\+Pools\+For\+Events()}.
+
+\label{struct_flux_vars_a6fd64673badab7f25854095c161de57f} 
+\index{FluxVars@{FluxVars}!eventLitterC@{eventLitterC}}
+\index{eventLitterC@{eventLitterC}!FluxVars@{FluxVars}}
+\doxysubsubsection{eventLitterC}
+{\footnotesize\ttfamily double Flux\+Vars\+::event\+LitterC}
+
+
+
+Definition at line \textbf{ 509} of file \textbf{ state.\+h}.
+
+
+
+Referenced by \textbf{ process\+Events()}, \textbf{ reset\+Event\+Fluxes()}, and \textbf{ soil\+Degradation()}.
+
+\label{struct_flux_vars_a4ce19489ea55aedbe2d0dfe57aa0caf5} 
+\index{FluxVars@{FluxVars}!eventSoilWater@{eventSoilWater}}
+\index{eventSoilWater@{eventSoilWater}!FluxVars@{FluxVars}}
+\doxysubsubsection{eventSoilWater}
+{\footnotesize\ttfamily double Flux\+Vars\+::event\+Soil\+Water}
+
+
+
+Definition at line \textbf{ 507} of file \textbf{ state.\+h}.
+
+
+
+Referenced by \textbf{ process\+Events()}, \textbf{ reset\+Event\+Fluxes()}, and \textbf{ update\+Pools\+For\+Events()}.
+
+\label{struct_flux_vars_a66de82d2a1d7b6781d64a58cafa7723d} 
+\index{FluxVars@{FluxVars}!eventWoodC@{eventWoodC}}
+\index{eventWoodC@{eventWoodC}!FluxVars@{FluxVars}}
+\doxysubsubsection{eventWoodC}
+{\footnotesize\ttfamily double Flux\+Vars\+::event\+WoodC}
+
+
+
+Definition at line \textbf{ 499} of file \textbf{ state.\+h}.
+
+
+
+Referenced by \textbf{ process\+Events()}, \textbf{ reset\+Event\+Fluxes()}, and \textbf{ update\+Pools\+For\+Events()}.
 
 \label{struct_flux_vars_a5454c2df7c0d34018230ecc44438582d} 
 \index{FluxVars@{FluxVars}!fastFlow@{fastFlow}}
@@ -147,7 +257,7 @@ Referenced by \textbf{ calculate\+Fluxes()}, \textbf{ update\+State()}, and \tex
 
 
 
-Definition at line \textbf{ 385} of file \textbf{ sipnet.\+c}.
+Definition at line \textbf{ 442} of file \textbf{ state.\+h}.
 
 
 
@@ -161,7 +271,7 @@ Referenced by \textbf{ calculate\+Fluxes()}, and \textbf{ update\+State()}.
 
 
 
-Definition at line \textbf{ 409} of file \textbf{ sipnet.\+c}.
+Definition at line \textbf{ 455} of file \textbf{ state.\+h}.
 
 
 
@@ -175,7 +285,7 @@ Referenced by \textbf{ calculate\+Fluxes()}, \textbf{ soil\+Degradation()}, and 
 
 
 
-Definition at line \textbf{ 406} of file \textbf{ sipnet.\+c}.
+Definition at line \textbf{ 451} of file \textbf{ state.\+h}.
 
 
 
@@ -189,11 +299,11 @@ Referenced by \textbf{ calculate\+Fluxes()}, and \textbf{ soil\+Degradation()}.
 
 
 
-Definition at line \textbf{ 381} of file \textbf{ sipnet.\+c}.
+Definition at line \textbf{ 439} of file \textbf{ state.\+h}.
 
 
 
-Referenced by \textbf{ calculate\+Fluxes()}, \textbf{ process\+Events()}, \textbf{ update\+State()}, and \textbf{ update\+Trackers()}.
+Referenced by \textbf{ calculate\+Fluxes()}, \textbf{ update\+State()}, and \textbf{ update\+Trackers()}.
 
 \label{struct_flux_vars_a8a0530fd720806ff0648b9522bc99e5c} 
 \index{FluxVars@{FluxVars}!leafCreation@{leafCreation}}
@@ -203,7 +313,7 @@ Referenced by \textbf{ calculate\+Fluxes()}, \textbf{ process\+Events()}, \textb
 
 
 
-Definition at line \textbf{ 370} of file \textbf{ sipnet.\+c}.
+Definition at line \textbf{ 486} of file \textbf{ state.\+h}.
 
 
 
@@ -217,7 +327,7 @@ Referenced by \textbf{ calculate\+Fluxes()}, and \textbf{ update\+State()}.
 
 
 
-Definition at line \textbf{ 372} of file \textbf{ sipnet.\+c}.
+Definition at line \textbf{ 405} of file \textbf{ state.\+h}.
 
 
 
@@ -231,7 +341,7 @@ Referenced by \textbf{ calculate\+Fluxes()}, \textbf{ soil\+Degradation()}, \tex
 
 
 
-Definition at line \textbf{ 375} of file \textbf{ sipnet.\+c}.
+Definition at line \textbf{ 425} of file \textbf{ state.\+h}.
 
 
 
@@ -245,7 +355,7 @@ Referenced by \textbf{ calculate\+Fluxes()}, and \textbf{ soil\+Degradation()}.
 
 
 
-Definition at line \textbf{ 402} of file \textbf{ sipnet.\+c}.
+Definition at line \textbf{ 471} of file \textbf{ state.\+h}.
 
 
 
@@ -259,7 +369,7 @@ Referenced by \textbf{ calc\+Maintenance\+Respiration()}, and \textbf{ soil\+Deg
 
 
 
-Definition at line \textbf{ 403} of file \textbf{ sipnet.\+c}.
+Definition at line \textbf{ 475} of file \textbf{ state.\+h}.
 
 
 
@@ -273,7 +383,7 @@ Referenced by \textbf{ microbe\+Growth()}, and \textbf{ soil\+Degradation()}.
 
 
 
-Definition at line \textbf{ 368} of file \textbf{ sipnet.\+c}.
+Definition at line \textbf{ 403} of file \textbf{ state.\+h}.
 
 
 
@@ -287,7 +397,7 @@ Referenced by \textbf{ calculate\+Fluxes()}, \textbf{ update\+State()}, and \tex
 
 
 
-Definition at line \textbf{ 379} of file \textbf{ sipnet.\+c}.
+Definition at line \textbf{ 413} of file \textbf{ state.\+h}.
 
 
 
@@ -301,7 +411,7 @@ Referenced by \textbf{ calculate\+Fluxes()}, and \textbf{ update\+State()}.
 
 
 
-Definition at line \textbf{ 413} of file \textbf{ sipnet.\+c}.
+Definition at line \textbf{ 459} of file \textbf{ state.\+h}.
 
 
 
@@ -315,25 +425,11 @@ Referenced by \textbf{ calculate\+Fluxes()}, \textbf{ soil\+Degradation()}, \tex
 
 
 
-Definition at line \textbf{ 414} of file \textbf{ sipnet.\+c}.
+Definition at line \textbf{ 461} of file \textbf{ state.\+h}.
 
 
 
 Referenced by \textbf{ calculate\+Fluxes()}, \textbf{ soil\+Degradation()}, \textbf{ update\+State()}, and \textbf{ update\+Trackers()}.
-
-\label{struct_flux_vars_ac0f8b0bf99efb773e8f67443121bdd86} 
-\index{FluxVars@{FluxVars}!rLeaf@{rLeaf}}
-\index{rLeaf@{rLeaf}!FluxVars@{FluxVars}}
-\doxysubsubsection{rLeaf}
-{\footnotesize\ttfamily double Flux\+Vars\+::r\+Leaf}
-
-
-
-Definition at line \textbf{ 394} of file \textbf{ sipnet.\+c}.
-
-
-
-Referenced by \textbf{ calculate\+Fluxes()}, and \textbf{ update\+Trackers()}.
 
 \label{struct_flux_vars_a11def2b79574bc863d317f1437f64c63} 
 \index{FluxVars@{FluxVars}!rLitter@{rLitter}}
@@ -343,7 +439,7 @@ Referenced by \textbf{ calculate\+Fluxes()}, and \textbf{ update\+Trackers()}.
 
 
 
-Definition at line \textbf{ 377} of file \textbf{ sipnet.\+c}.
+Definition at line \textbf{ 427} of file \textbf{ state.\+h}.
 
 
 
@@ -357,7 +453,7 @@ Referenced by \textbf{ calculate\+Fluxes()}, \textbf{ soil\+Degradation()}, and 
 
 
 
-Definition at line \textbf{ 378} of file \textbf{ sipnet.\+c}.
+Definition at line \textbf{ 411} of file \textbf{ state.\+h}.
 
 
 
@@ -371,25 +467,11 @@ Referenced by \textbf{ soil\+Degradation()}, and \textbf{ update\+Trackers()}.
 
 
 
-Definition at line \textbf{ 374} of file \textbf{ sipnet.\+c}.
+Definition at line \textbf{ 409} of file \textbf{ state.\+h}.
 
 
 
 Referenced by \textbf{ calculate\+Fluxes()}, \textbf{ update\+State()}, and \textbf{ update\+Trackers()}.
-
-\label{struct_flux_vars_a3c51d0552452feb1d466eeeb1b9cd69e} 
-\index{FluxVars@{FluxVars}!rWood@{rWood}}
-\index{rWood@{rWood}!FluxVars@{FluxVars}}
-\doxysubsubsection{rWood}
-{\footnotesize\ttfamily double Flux\+Vars\+::r\+Wood}
-
-
-
-Definition at line \textbf{ 393} of file \textbf{ sipnet.\+c}.
-
-
-
-Referenced by \textbf{ calculate\+Fluxes()}, and \textbf{ update\+Trackers()}.
 
 \label{struct_flux_vars_a50a513f04f2a2f0bcabc058cf597d1aa} 
 \index{FluxVars@{FluxVars}!snowFall@{snowFall}}
@@ -399,7 +481,7 @@ Referenced by \textbf{ calculate\+Fluxes()}, and \textbf{ update\+Trackers()}.
 
 
 
-Definition at line \textbf{ 380} of file \textbf{ sipnet.\+c}.
+Definition at line \textbf{ 431} of file \textbf{ state.\+h}.
 
 
 
@@ -413,7 +495,7 @@ Referenced by \textbf{ calculate\+Fluxes()}, and \textbf{ update\+State()}.
 
 
 
-Definition at line \textbf{ 383} of file \textbf{ sipnet.\+c}.
+Definition at line \textbf{ 433} of file \textbf{ state.\+h}.
 
 
 
@@ -427,7 +509,7 @@ Referenced by \textbf{ calculate\+Fluxes()}, and \textbf{ update\+State()}.
 
 
 
-Definition at line \textbf{ 416} of file \textbf{ sipnet.\+c}.
+Definition at line \textbf{ 477} of file \textbf{ state.\+h}.
 
 
 
@@ -441,25 +523,11 @@ Referenced by \textbf{ calculate\+Fluxes()}, and \textbf{ soil\+Degradation()}.
 
 
 
-Definition at line \textbf{ 384} of file \textbf{ sipnet.\+c}.
+Definition at line \textbf{ 435} of file \textbf{ state.\+h}.
 
 
 
 Referenced by \textbf{ calculate\+Fluxes()}, \textbf{ update\+State()}, and \textbf{ update\+Trackers()}.
-
-\label{struct_flux_vars_a95972a67b0959ceff088aa7cc6b1d932} 
-\index{FluxVars@{FluxVars}!topDrainage@{topDrainage}}
-\index{topDrainage@{topDrainage}!FluxVars@{FluxVars}}
-\doxysubsubsection{topDrainage}
-{\footnotesize\ttfamily double Flux\+Vars\+::top\+Drainage}
-
-
-
-Definition at line \textbf{ 388} of file \textbf{ sipnet.\+c}.
-
-
-
-Referenced by \textbf{ calculate\+Fluxes()}.
 
 \label{struct_flux_vars_adee1b0917d1707b6468fb012261d2f66} 
 \index{FluxVars@{FluxVars}!transpiration@{transpiration}}
@@ -469,7 +537,7 @@ Referenced by \textbf{ calculate\+Fluxes()}.
 
 
 
-Definition at line \textbf{ 392} of file \textbf{ sipnet.\+c}.
+Definition at line \textbf{ 415} of file \textbf{ state.\+h}.
 
 
 
@@ -483,7 +551,7 @@ Referenced by \textbf{ calculate\+Fluxes()}, \textbf{ output\+State()}, \textbf{
 
 
 
-Definition at line \textbf{ 411} of file \textbf{ sipnet.\+c}.
+Definition at line \textbf{ 489} of file \textbf{ state.\+h}.
 
 
 
@@ -497,7 +565,7 @@ Referenced by \textbf{ calculate\+Fluxes()}, and \textbf{ update\+State()}.
 
 
 
-Definition at line \textbf{ 373} of file \textbf{ sipnet.\+c}.
+Definition at line \textbf{ 407} of file \textbf{ state.\+h}.
 
 
 
@@ -507,4 +575,4 @@ Referenced by \textbf{ calculate\+Fluxes()}, \textbf{ soil\+Degradation()}, and 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-\textbf{ sipnet.\+c}\end{DoxyCompactItemize}
+\textbf{ state.\+h}\end{DoxyCompactItemize}
